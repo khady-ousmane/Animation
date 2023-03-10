@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: white;
+}
+.carre{
+    width: 20rem;
+    height: 20rem;
+    margin: 4rem auto;
+    background: red;
+    position: relative;
+    margin-top: 10rem;
+}
+.rotate .text{
+    rotate:-45deg;
+    margin-left: 6rem;
+}
+.carre .haut{
+    display: flex;
+    z-index: 99999999999;
+    position: absolute;
+}
+
+.carre .bas{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    z-index: 999999999999999999999999;
+}
+
+.carre .haut .r1,.carre .bas .r1{
+    width: 10rem;
+    height: .5rem;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition:all .5s;
+}
+
+
+.carre:hover .haut .r1,.carre:hover .haut .r2{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.carre:hover .bas .r1,.carre:hover .bas .r2{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.carre .haut .r2,.carre .bas .r2{
+    width: 10rem;
+    height: .5rem;
+    background: white;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition:all .5s;
+}
+
+.carre .gauche{
+    position: absolute;
+}
+
+.carre .gauche .r1,.carre .gauche .r2{
+    width: 10rem;
+    height: 10rem;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(0 100%, 7% 100%, 7% 100%, 0% 100%);
+    transition:all .5s;
+}
+.carre .gauche .r2{
+    clip-path: polygon(0 0, 7% 0, 7% 0, 0 0);
+}
+
+.carre:hover .gauche .r1,.carre:hover .gauche .r2{
+    clip-path: polygon(0 0, 7% 0, 7% 100%, 0% 100%);
+    transition:.6s ease-in-out;
+    transition-delay: .3s;
+}
+.carre:hover .gauche .r2{
+    clip-path: polygon(0 0, 7% 0, 7% 100%, 0% 100%);
+    transition:.3s ease-in-out;
+    transition-delay: .6s;  
+}
+.carre .droite{
+    position: absolute;
+    left: 96.5%;
+    
+}
+.carre .droite .r1{
+    width: 10rem;
+    height: 10rem;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(0 100%, 7% 100%, 7% 100%, 0% 100%);
+}
+.carre .droite .r2{
+    width: 10rem;
+    height: 9.5rem;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(0 0, 7% 0, 7% 0, 0 0);
+}
+.carre:hover .droite .r1{
+    clip-path: polygon(0 0, 7% 0, 7% 100%, 0% 100%);
+    transition:.6s ease-in-out;
+    transition-delay: .3s;
+}
+.carre:hover .droite .r2{
+    clip-path: polygon(0 0, 7% 0, 7% 100%, 0% 100%);
+    transition:.6s ease-in-out;
+    transition-delay: .3s;
+    
+}
+.text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: black;
+}
+.color{
+    color: white;
+}
+
+
+/* ************************************************************************** */
+
+.rotate{
+    width: 20rem;
+    height: 20rem;
+    rotate: 45deg;
+    background: red;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+}
+
+
+.carre .rotate:hover .haut .r1,.carre .rotate:hover .haut .r2{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition:clip-path .5s;
+    transition-delay: .9s;
+}
+
+.carre .rotate:hover .bas .r1,.carre .rotate:hover .bas .r2{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition:clip-path .5s;
+    transition-delay: .9s;
+}
+
+
+
+.carre .rotate:hover .droite .r1{
+    clip-path: polygon(0 0, 7% 0, 7% 100%, 0% 100%);
+   transition:clip-path .5s;
+    transition-delay: 1s;
+}
+
+.carre .rotate:hover .gauche .r1{
+    clip-path: polygon(0 0, 7% 0, 7% 100%, 0% 100%);
+   transition:clip-path .5s;
+    transition-delay: 1s;
+}
+
+.carre .rotate:hover .gauche .r2{
+    clip-path: polygon(0 0, 7% 0, 7% 100%, 0% 100%);
+   transition:clip-path .5s;
+    transition-delay:1s;
+    
+}
+
+.carre .rotate:hover .droite .r2{
+    clip-path: polygon(0 0, 7% 0, 7% 100%, 0% 100%);
+   transition:clip-path .5s;
+    transition-delay:1s;
+    
+}

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+
+}
+  input#go {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    border: 2px solid white;
+    font-size: 5rem;
+  }
+
+  input#go:hover {
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+
+  }
+
+  

@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+.pharmacie {
+width: 200px;
+height: 80px;
+background-color: #ffffff;
+border: 5px solid #000000;
+border-radius: 8px;
+position: relative;
+overflow: hidden;
+font-weight: bold;
+}
+      
+.pharmacie p {
+font-size: 18px;
+color: #000000;
+text-align: center;
+z-index: 2;
+position: relative;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.pharmacie::after {
+content: "";
+position: absolute;
+top: 0;
+left: 50%;
+width: 0px;
+height: 100%;
+background-color: #00ff00;
+transform: translateX(-50%);
+transition:width 3s;
+
+
+}
+      
+.pharmacie::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 0;
+width: 200%;
+height: 0px;
+background-color: #00ff00;
+transform-origin: top left;
+transform: translateY(-50%) ;
+transition: height 2s;
+
+
+
+}
+      
+.pharmacie:hover::after{
+  width: 50%;
+}
+.pharmacie:hover::before{
+    height: 50%;
+  }
+  
